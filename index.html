@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Pressure Power Washing - Professional Cleaning Services in Bentonville, AR</title>
+    <meta name="description" content="Professional power washing services in Bentonville, Rogers, Little Flock, Bella Vista & surrounding areas. House washing, roof cleaning, driveway cleaning. Call (479) 399-8717">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom styles -->
+    <style>
+
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="perfect-pressure-logo.png" alt="Perfect Pressure Logo" class="w-16 h-16 mr-3">
+                        <div>
+                            <div class="text-xl font-bold text-blue-600">Perfect Pressure</div>
+                            <div class="text-xs text-gray-500">Professional Power Washing</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="javascript:showServices()" class="text-gray-600 hover:text-blue-600">Services</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600">About</a>
+                    <a href="javascript:showGallery()" class="text-gray-600 hover:text-blue-600">Gallery</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
+                    <a href="tel:4793998717" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="text-white min-h-screen flex items-center justify-center bg-cover bg-center relative" style="background-image: url('hero-background.png');">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    POWER WASHING SERVICE
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-white">
+                    Professional Power Washing Services
+                </p>
+                <p class="text-lg mb-8 text-gray-200">
+                    Transform your property with our cleaning solutions
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
+                    <button onclick="openCalculator()" class="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transform hover:scale-105 transition-all flex items-center">
+                        <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                        ONLINE HOUSE WASH ESTIMATE
+                    </button>
+                    
+                    <a href="tel:4793998717" class="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transform hover:scale-105 transition-all flex items-center">
+                        <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        CALL NOW
+                    </a>
+                    
+                    <a href="sms:4793998717" class="bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-700 transform hover:scale-105 transition-all flex items-center">
+                        <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        </svg>
+                        TEXT US
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cost Calculator Section -->
+    <section id="cost-calculator" class="py-16 bg-gradient-to-r from-blue-500 to-blue-600 text-white" style="display: none;">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                    </svg>
+                </div>
+                <h2 class="text-4xl font-bold mb-4">Cost Calculator</h2>
+                <p class="text-xl text-blue-100">Get an instant estimate for your power washing project</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Project Details -->
+                <div class="bg-white rounded-lg p-8 text-gray-800">
+                    <div class="flex items-center mb-6">
+                        <svg class="w-6 h-6 text-gray-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5v4m4-4v4m4-4v4"></path>
+                        </svg>
+                        <h3 class="text-xl font-semibold">Project Details</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">Tell us about your property and the services you need</p>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Service Type</label>
+                            <select id="service-type" class="w-full p-3 border border-gray-300 rounded-md bg-white">
+                                <option value="">Select a service</option>
+                                <option value="driveway">Driveway Washing ($0.10 per sq ft)</option>
+                                <option value="roof">Roof Cleaning ($0.40 per sq ft)</option>
+                                <option value="house">House Washing (Starting $200)</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Square Footage</label>
+                            <input type="number" id="square-footage" placeholder="1500" class="w-full p-3 border border-gray-300 rounded-md">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Promo Code (Optional)</label>
+                            <input type="text" id="promo-code" placeholder="Enter promo code" class="w-full p-3 border border-gray-300 rounded-md">
+                        </div>
+
+                        <button onclick="calculateCost()" class="w-full bg-blue-600 text-white py-3 px-6 rounded-md font-semibold hover:bg-blue-700 flex items-center justify-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                            </svg>
+                            Calculate Cost
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cost Estimate -->
+                <div class="bg-white rounded-lg p-8 text-gray-800">
+                    <div class="flex items-center mb-6">
+                        <svg class="w-6 h-6 text-gray-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                        </svg>
+                        <h3 class="text-xl font-semibold">Cost Estimate</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">Fill out the form to get your estimate</p>
+                    
+                    <div id="calculator-result" class="text-center py-12" style="display: none;">
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <p class="text-2xl font-bold text-green-600" id="total-cost">$0.00</p>
+                            <p class="text-gray-600 mt-2">Estimated Cost</p>
+                        </div>
+                    </div>
+                    
+                    <div id="calculator-placeholder" class="text-center py-12">
+                        <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                        <p class="text-gray-500">Enter your project details to see an estimated cost</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">HOW CAN WE HELP YOU TODAY?</h2>
+                <p class="text-xl text-gray-600">Professional exterior cleaning services for your home or business</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Pressure Washing -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="pressure-washing.png" alt="Professional pressure washing service" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Pressure Washing</h3>
+                        <p class="text-gray-600 mb-4">Professional pressure washing for driveways, sidewalks, and hard surfaces.</p>
+                        <p class="text-blue-600 font-semibold">$0.10 per sq ft</p>
+                    </div>
+                </div>
+
+                <!-- House Washing -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="house-washing.png" alt="House washing service" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">House Washing</h3>
+                        <p class="text-gray-600 mb-4">Gentle soft washing to clean your home's exterior siding safely.</p>
+                        <button onclick="openCalculator()" class="text-blue-600 font-semibold hover:text-blue-800">Use Calculator</button>
+                    </div>
+                </div>
+
+                <!-- Roof Cleaning -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="roof-cleaning.png" alt="Roof cleaning service" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Roof Cleaning</h3>
+                        <p class="text-gray-600 mb-4">Safe removal of algae, moss, and stains from your roof.</p>
+                        <p class="text-blue-600 font-semibold">$0.40 per sq ft</p>
+                    </div>
+                </div>
+
+                <!-- Gutter Cleaning -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="gutter-cleaning.png" alt="Gutter cleaning service" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Gutter Cleaning</h3>
+                        <p class="text-gray-600 mb-4">Complete gutter cleaning and maintenance services.</p>
+                        <p class="text-blue-600 font-semibold">Contact for Quote</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Why Choose Perfect Pressure?</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-600 text-white rounded-full p-2 mr-4 mt-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">Professional Equipment</h3>
+                                <p class="text-gray-600">We use commercial-grade equipment for superior results.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-600 text-white rounded-full p-2 mr-4 mt-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">Experienced Team</h3>
+                                <p class="text-gray-600">Years of experience in pressure washing and exterior cleaning.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-600 text-white rounded-full p-2 mr-4 mt-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">Local & Reliable</h3>
+                                <p class="text-gray-600">Proudly serving the Bentonville area with reliable service.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-blue-600 to-purple-700 rounded-lg p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-4">Get Your Free Quote Today!</h3>
+                    <p class="mb-6">Ready to transform your property? Contact us for a free, no-obligation quote.</p>
+                    <a href="tel:4793998717" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 inline-block">
+                        Call (479) 399-8717
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-2">Is Soft Washing Safe For Plants And Landscaping?</h3>
+                    <p class="text-gray-600">Yes, our soft washing process uses Perfect Pressure-approved cleaning solutions that are safe for your plants and landscaping when applied correctly. We take precautions to protect your vegetation during the cleaning process.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-2">How Often Should I Have My House Washed?</h3>
+                    <p class="text-gray-600">We recommend having your house washed annually to maintain its appearance and protect your investment. However, frequency may vary based on your local environment and exposure to elements.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-2">What's Included In House Washing Service?</h3>
+                    <p class="text-gray-600">Our house washing service includes cleaning of exterior siding, removal of dirt, mildew, and algae. This helps maintain your home's appearance and extends the life of your exterior surfaces.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-2">Do You Offer Emergency Cleaning Services?</h3>
+                    <p class="text-gray-600">Yes, we understand that sometimes you need cleaning services urgently. Contact us to discuss your emergency cleaning needs and we'll do our best to accommodate your schedule.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Ready to Get Started?</h2>
+                <p class="text-xl">Contact Perfect Pressure for professional power washing services</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white bg-opacity-10 rounded-lg p-6">
+                    <div class="text-3xl mb-4">📞</div>
+                    <h3 class="text-xl font-semibold mb-2">Call Us</h3>
+                    <a href="tel:4793998717" class="text-lg hover:underline">(479) 399-8717</a>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-lg p-6">
+                    <div class="text-3xl mb-4">✉️</div>
+                    <h3 class="text-xl font-semibold mb-2">Email Us</h3>
+                    <a href="mailto:perfectpreasure@gmail.com" class="text-lg hover:underline">perfectpreasure@gmail.com</a>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-lg p-6">
+                    <div class="text-3xl mb-4">📍</div>
+                    <h3 class="text-xl font-semibold mb-2">Service Areas</h3>
+                    <p class="text-lg">Bentonville, Rogers, Little Flock, Bella Vista & Surrounding Areas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4">Perfect Pressure</h3>
+                    <p class="text-gray-300 mb-4">
+                        Professional power washing services in Bentonville, Bella Vista, and surrounding areas. 
+                        Perfect Pressure solutions for your home and business.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=61576002187320" target="_blank" class="text-gray-400 hover:text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@aquawashco" target="_blank" class="text-gray-400 hover:text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Pressure Washing</li>
+                        <li>House Washing</li>
+                        <li>Roof Cleaning</li>
+                        <li>Gutter Cleaning</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Phone: (479) 399-8717</li>
+                        <li>Email: perfectpreasure@gmail.com</li>
+                        <li>Bentonville, AR</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Perfect Pressure Power Washing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple Cost Calculator Modal -->
+    <div id="calculator-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-lg max-w-md w-full p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-bold">Quick Cost Estimate</h3>
+                    <button onclick="closeCalculator()" class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <form id="calculator-form">
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Service Type</label>
+                            <select id="service-type" class="w-full p-2 border border-gray-300 rounded-md">
+                                <option value="driveway">Driveway Cleaning ($0.10/sq ft)</option>
+
+                                <option value="house">House Washing (Starting $200)</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Square Footage</label>
+                            <input type="number" id="square-footage" placeholder="Enter square footage" class="w-full p-2 border border-gray-300 rounded-md">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Promo Code (Optional)</label>
+                            <input type="text" id="promo-code" placeholder="Enter promo code" class="w-full p-2 border border-gray-300 rounded-md">
+                        </div>
+                        
+                        <button type="button" onclick="calculateCost()" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">
+                            Calculate Estimate
+                        </button>
+                        
+                        <div id="calculator-result" class="hidden bg-blue-50 p-4 rounded-md">
+                            <p class="text-lg font-semibold text-blue-800">Estimated Cost: <span id="total-cost">$0</span></p>
+                            <p class="text-sm text-blue-600 mt-2">Call (479) 399-8717 for an accurate quote!</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navigation functions
+        function showServices() {
+            window.open('services.html', '_blank');
+        }
+        
+        function showGallery() {
+            window.open('gallery.html', '_blank');
+        }
+
+        // Calculator functions
+        function openCalculator() {
+            window.open('calculator.html', '_blank');
+        }
+
+        function closeCalculator() {
+            document.getElementById('cost-calculator').style.display = 'none';
+            document.getElementById('calculator-result').style.display = 'none';
+        }
+
+        function calculateCost() {
+            const serviceType = document.getElementById('service-type').value;
+            const squareFootage = parseFloat(document.getElementById('square-footage').value);
+            const promoCode = document.getElementById('promo-code').value.trim().toUpperCase();
+            
+            if (!squareFootage || squareFootage <= 0) {
+                alert('Please enter a valid square footage');
+                return;
+            }
+            
+            // Check for admin access
+            if (promoCode === 'ADMIN2025') {
+                alert('Admin access detected! Contact Perfect Pressure for administrative access.');
+                return;
+            }
+            
+            let cost = 0;
+            switch(serviceType) {
+                case 'driveway':
+                    cost = squareFootage * 0.10;
+                    break;
+                case 'roof':
+                    cost = squareFootage * 0.40;
+                    break;
+                case 'house':
+                    cost = Math.max(200, squareFootage * 0.15);
+                    break;
+            }
+            
+            // Apply promo code discounts
+            let discount = 0;
+            let discountText = '';
+            
+            if (promoCode === 'SAVE10') {
+                discount = 0.10;
+                discountText = ' (10% OFF applied!)';
+            } else if (promoCode === 'NEWCUSTOMER') {
+                discount = 0.15;
+                discountText = ' (15% New Customer Discount!)';
+            } else if (promoCode === 'SPRING25') {
+                discount = 0.25;
+                discountText = ' (25% Spring Special!)';
+            } else if (promoCode && promoCode !== '') {
+                document.getElementById('total-cost').textContent = 'Invalid promo code';
+                document.getElementById('calculator-result').style.display = 'block';
+                document.getElementById('calculator-placeholder').style.display = 'none';
+                return;
+            }
+            
+            const finalCost = cost * (1 - discount);
+            document.getElementById('total-cost').textContent = `$${finalCost.toFixed(2)}${discountText}`;
+            document.getElementById('calculator-result').style.display = 'block';
+            document.getElementById('calculator-placeholder').style.display = 'none';
+        }
+
+        // Add calculator button to hero section
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroButtons = document.querySelector('.hero-bg .space-x-4');
+            if (heroButtons) {
+                const calcButton = document.createElement('a');
+                calcButton.href = '#';
+                calcButton.onclick = function(e) { e.preventDefault(); openCalculator(); };
+                calcButton.className = 'bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 inline-block';
+                calcButton.textContent = 'Get Estimate';
+                heroButtons.appendChild(calcButton);
+            }
+        });
+    </script>
+</body>
+</html>
